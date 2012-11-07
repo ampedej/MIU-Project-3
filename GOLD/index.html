@@ -44,7 +44,7 @@ Corrections made from project 2
 		
 			<!--Add item feature call to action-->
 	    	<div id="feature1">
-		    	<a href="additem.html" Data-ajax="false" ><img id ="feature" img src="images/addrecipe.png"/></a>
+		    	<a href="#additem" Data-ajax="false" ><img id ="feature" img src="images/addrecipe.png"/></a>
 		    </div><br/>
 		    
 		    <!--Listview browse recipes (one window drilldown)-->
@@ -78,6 +78,87 @@ Corrections made from project 2
 					<li><a href="#error" data-icon="search">Find Recipes</a></li><!--Link to some type of API or feed in the future-->
 				</ul>
 			</div>
+		</div>
+	</div>
+	
+	<!--Add Item Page(Form)-->
+	<div data-role="page" id="additem" data-add-back-btn="true">
+		<div data-role="header" data-theme="b">
+    		<h1>Add New Recipe</h1>
+		</div>
+		
+		<div data-role="content">
+		
+			<form action="#" method="post" id= "recipeForm">
+				<legend>Add your new recipe!</legend>
+				<p>*Fields are required</p>
+			
+				<div data-role="fieldcontain">
+					<label for="rname">*Recipe Name:</label><input type="text" id="rname" placeholder="'Homemade Chili'"/>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="dateadded">*Date:</label><input type="date" min="2012-09-25" max="2014-01-01" id="dateadded" placeholder="2012-09-25" />
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="rating">*Rate This Recipe (1-5):</label><input type="range" value="3" min="1" max="5" id="rating" />
+				</div>
+				
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>*Recipe Category:</legend>
+						<input type="radio" checked value="Meat" id="meat" name="category" /><label for="meat">Meat</label>
+	    				<input type="radio" value="Pasta" id="pasta" name="category" /><label for="pasta">Pasta</label>
+	    				<input type="radio" value="Soup" id="soup" name="category" /><label for="soup">Soup</label>
+	    				<input type="radio" value="Dessert" id="dessert" name="category" /><label for="dessert">Dessert</label>
+					</fieldset>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="rtype">*Recipe Type:</label>
+					<select name="rtype" id="rtype" data-native-menu="false">
+						<option data-placeholder="true">Please Choose One</option>
+						<optgroup label="Meats">
+    						<option value="Chicken">Chicken</option>
+    						<option value="Beef">Beef</option>
+    						<option value="Pork">Pork</option>
+    						<option value="Fish">Fish</option>
+    					</optgroup>
+    					<optgroup label="Pasta">
+    						<option value="Spaghetti">Spaghetti</option>
+    						<option value="Lasagna">Lasagna</option>
+    						<option value="Pasta Salad">Pasta Salad</option>
+    						<option value="Ravioli">Ravioli</option>
+    					</optgroup>
+    					<optgroup label="Soups">
+    						<option value="Chili">Chili</option>
+    						<option value="Chowder">Chowder</option>
+    						<option value="Stew">Stew</option>
+    						<option value="Seafood">Seafood</option>
+    					</optgroup>
+    					<optgroup label="Desserts">
+    						<option value="Cake">Cake</option>
+    						<option value="Cookies">Cookies</option>
+    						<option value="Pies">Pies</option>
+    						<option value="Mousse">Mousse</option>
+    					</optgroup>
+					</select>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="ringredients">*Recipe Ingredients:</label><textarea id="ringredients" placeholder="List of ingredients for recipe."></textarea>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="rdirections">Recipe Directions:</label><textarea id="rdirections" placeholder="Add recipe directions here."></textarea>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<input type="submit" value="Add My Recipe" id="submit" data-theme="b" /><br/>
+					<input type="reset" value="Reset Form" id="reset" data-theme="a" />
+				</div>
+			
 		</div>
 	</div>
 	
@@ -244,7 +325,7 @@ Corrections made from project 2
 		
 		<div data-role="content">
 			<div id="feature1">
-		    	<a href="additem.html" Data-ajax="false" ><img id ="feature" img src="images/addrecipe.png"/></a>
+		    	<a href="#additem" Data-ajax="false" ><img id ="feature" img src="images/addrecipe.png"/></a>
 		    </div><br/>
 		    <h2>This page is under construction</h2>
 		</div>
