@@ -5,18 +5,33 @@ MIU 1211
 main js File
 GOLD APP
 */
-$('#home').on('pageinit', function(){
+/*$('#home').on('pageinit', function(){
 	//code needed for home page goes here
-});
+});*/
+
+var storeData = function(data){
+	console.log(data);
+};
 	
 $('#additem').on('pageinit', function(){
 
-		var myForm = $('#recipeForm');
-		    myForm.validate({
+		var rform = $('#recipeform'),
+			rferrorslink = $('#rferrorslink')
+			;
+		    rform.validate({
 			invalidHandler: function(form, validator) {
+				rferrorslink.click();
+				var html = '';
+				for ( var key in validator.submitted){
+					var label = $('label[for^="'+ key +'"]');
+					var legend = label.closest('fieldset').find('.ui-controlgroup-label');
+					var fieldName = legend.length ? legend.text() : label.text();
+					html += '<li>' + fieldName + '<li>';
+				};
+				$("#recipeformerrors ul").html(html);
 			},
 			submitHandler: function() {
-		var data = myForm.serializeArray();
+		var data = rform.serializeArray();
 			storeData(data);
 		}
 	});
@@ -27,7 +42,7 @@ $('#additem').on('pageinit', function(){
 
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
 
-var autofillData = function (){
+/*var autofillData = function (){
 	 
 };
 
@@ -45,5 +60,5 @@ var	deleteItem = function (){
 					
 var clearLocal = function(){
 
-};
+};*/
 

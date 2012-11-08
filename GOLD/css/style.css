@@ -48,6 +48,8 @@ input#submit{ width: 120px; height: 35px; font-size: 13px; color: white; text-sh
 /*Display data*/
 div#items ul:first-child ul { background-color: #CCD7D5; margin-top: 20px; padding-top: 15px; padding-bottom: 15px; margin-left: 1px; border-radius: 15px; border: solid #9aa6a4; border-width: 2px; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);  }
 
+/*JQuery Styles*/
+
 #category h2.ui-li-heading { margin: -5px 0 0 -40px;}
 #category div.ui-btn-inner { height: 50px; }
 
@@ -57,3 +59,6 @@ div#items ul:first-child ul { background-color: #CCD7D5; margin-top: 20px; paddi
 
 #recentlyadded h2.ui-li-heading { margin: -5px 0 0 -40px;}
 #recentlyadded div.ui-btn-inner { height: 50px; }
+
+label.error { display:block; margin:5px 0; color: #cc0000 }
+#rferrorslink { display: none; }
