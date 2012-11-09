@@ -89,17 +89,15 @@ Corrections made from project 2
 		
 		<div data-role="content">
 		
-			<form action="" method="post" id="recipeform">
+			<form action="" method="post" id="recipeform" >
 				<legend>Add your new recipe!</legend>
 				<p>*Fields are required</p>
 			
 				<div data-role="fieldcontain">
-					<label for="rname">Recipe Name:*</label><input type="text" id="rname" placeholder="'Homemade Chili'" class="required" />
+					<label for="rname">*Recipe Name:</label><input type="text" id="rname" placeholder="'Homemade Chili'" class="required" />
 				</div>
 				
-				<div data-role="fieldcontain">
-					<label for="dateadded">*Date:</label><input type="date" id="dateadded" class="required date" />
-				</div>
+					<label for="dateadded">*Date:</label><input type="date" id="dateadded" class="required" />
 				
 				<div data-role="fieldcontain">
 					<label for="rating">*Rate This Recipe (1-5):</label><input type="range" value="3" min="1" max="5" id="rating" />
@@ -147,36 +145,30 @@ Corrections made from project 2
 				</div>
 				
 				<div data-role="fieldcontain">
-					<label for="ringredients">*Recipe Ingredients:</label><textarea id="ringredients" placeholder="List of ingredients for recipe." class="required" ></textarea>
+					<label for="ringredients">*Recipe Ingredients:</label><textarea id="ringredients" class="required" placeholder="1 cup of water, 1 cup of milk, etc..." ></textarea>
 				</div>
 				
 				<div data-role="fieldcontain">
-					<label for="rdirections">Recipe Directions:</label><textarea id="rdirections" placeholder="Add recipe directions here." class="required"></textarea>
+					<label for="rdirections">Recipe Directions:</label><textarea id="rdirections" placeholder="Preheat oven to 325, mix ingredients, etc..." class="required"></textarea>
 				</div>
 				
 				<div data-role="fieldcontain">
-					<input type="submit" value="Add My Recipe" id="submit" data-theme="b" /><br/>
-					<input type="reset" value="Reset Form" id="reset" data-theme="a" />
+					<input type="submit" value="Add My Recipe" data-theme="b" /><br/>
+					<input type="reset" value="Reset Form" data-theme="a" />
 				</div>
-				<a href="#recipeformerrors" id="rferrorslink" data-rel="dialog" data-transition="pop" >open errors</a>
 			</form>
 		</div>
-	</div>
-	
-	<div data-role="dialog" id="recipeformerrors">
-		
-		<div data-role="header" data-postion="fixed">
-			<h1>Fields Missed</h1>
+		<!--Footer Navigation Bar-->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#about" data-icon="info">About</a></li>
+					<li><a href="#error" data-icon="search">Find Recipes</a></li><!--Link to some type of API or feed in the future-->
+				</ul>
+			</div>
 		</div>
-		
-		<div data-role="content">
-			<ul>
-				<li>test</li>
-			</ul>
-		
-		</div>	
-		
-	</div>	
+	</div>
 	
 	<!--Category Page (Thumbnail)-->
 	<div data-role="page" id="category" data-add-back-btn="true" data-position="fixed">

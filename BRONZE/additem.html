@@ -31,12 +31,13 @@ BRONZE APP
     	<form action="#" method="post" id= "recipeForm">
     		<fieldset id = "recipeFieldset">
     			<legend>Add your new recipe!</legend>
+    			<p>*Fields are required</p>
     			<ul id="errors"></ul>
     			<ul>
-    				<li><label for="rname">Recipe Name:</label><input type="text" id="rname" /></li>
-    				<li><label for="dateadded">Date:</label><input type="date" min="2012-09-25" max="2014-01-01" id="dateadded" placeholder="2012-09-25" /></li>
-    				<li><label for="rating">Rate This Recipe (1-5):</label><input type="range" min="1" max="5" id="rating"</li>
-    				<li>Recipe Category:
+    				<li><label for="rname">*Recipe Name:</label><input type="text" id="rname" /></li>
+    				<li><label for="dateadded">*Date:</label><input type="date" min="2012-09-25" max="2014-01-01" id="dateadded" placeholder="2012-09-25" /></li>
+    				<li><label for="rating">*Rate This Recipe (1-5):</label><input type="range" min="1" max="5" id="rating"</li>
+    				<li>*Recipe Category:
     					<ul>
 	    					<li><input type="radio" checked value="Meat" id="meat" name="category" /><label for="meat">Meat</label></li>
 	    					<li><input type="radio" value="Pasta" id="pasta" name="category" /><label for="pasta">Pasta</label></li>
@@ -44,9 +45,9 @@ BRONZE APP
 	    					<li><input type="radio" value="Dessert" id="dessert" name="category" /><label for="dessert">Dessert</label></li>
     					</ul>
     				</li>
-    				<li id ="select"><label for="rtype">Recipe Type:</label></li>
-    				<li><label for="ringredients">Recipe Ingredients:</label><br /><textarea id="ringredients"></textarea></li>
-    				<li><label for="rdirections">Recipe Directions:</label><br /><textarea id="rdirections"></textarea></li>
+    				<li id ="select"><label for="rtype">*Recipe Type:</label></li>
+    				<li><label for="ringredients">*Recipe Ingredients:</label><br /><textarea id="ringredients"></textarea></li>
+    				<li><label for="rdirections">*Recipe Directions:</label><br /><textarea id="rdirections"></textarea></li>
     			</ul>
     			<input type="submit" value="Add My Recipe" id="submit" />
     		</fieldset>
